@@ -1,12 +1,12 @@
 <template>
-  <canvas id="cann"></canvas>
+  <canvas id="can"></canvas>
 </template>
 <script setup lang="ts">
 import * as THREE from 'three';
 import { onMounted, onUnmounted, ref } from 'vue';
 // import OrbitControls from 'three-orbitcontrols';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import { createSun, update, createCubeRt } from '../class/sun-test';
+import { createSun, update, createCubeRt } from '../class/sun-test copy';
 
 
 let canvas;
@@ -59,7 +59,8 @@ function animate() {
 
 
 onMounted(() => {
-  canvas = document.getElementById('cann');
+   canvas = document.getElementById('can');
+
   camera = new THREE.OrthographicCamera(
     canvas?.offsetWidth / 2,
     -canvas?.offsetWidth / 2,
@@ -68,7 +69,7 @@ onMounted(() => {
     -10000, // 近端
     10000 // 远端
   );
-  camera.position.set(0, 0, 5000);
+  camera.position.set(5000, 0, 5000);
   camera.zoom = 0.5
   renderer = new THREE.WebGLRenderer({ canvas: canvas });
   renderer.setSize(canvas.offsetWidth, canvas.offsetHeight);
@@ -86,7 +87,7 @@ onMounted(() => {
   const sphere = createSun()
   scene.add(sphere);
   createCubeRt();
-  camera.lookAt(sphere.position)
+  // camera.lookAt(sphere.position)
   // 给太阳添加一个点光源
   const pointLight = new THREE.PointLight(0xffffff, 15, 0, 0);
   pointLight.position.set(0, 0, 0);
@@ -147,7 +148,7 @@ function resize() {
 }
 </script>
 <style scoped>
-#cann {
+#can {
   width: 100%;
   height: 100%;
 }

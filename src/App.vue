@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-import Three from './views/Three.vue';
 </script>
 
 
@@ -19,7 +17,7 @@ import Three from './views/Three.vue';
     </div>
   </header> -->
 
-  <Three />
+  <RouterView />
 </template>
 
 
