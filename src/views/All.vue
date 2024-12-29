@@ -7,7 +7,8 @@
             <div class="upp">
                 <HalfView></HalfView>
             </div>
-            <div class="down">
+            <div class="downn">
+                <Track></Track>
             </div>
         </div>
     </div>
@@ -15,6 +16,7 @@
 <script setup>
 import HalfView from './HalfView.vue';
 import Three from './Three.vue';
+import Track from './Track.vue';
 </script>
 <style scoped>
 .full-scene{
@@ -23,11 +25,13 @@ import Three from './Three.vue';
 .two-part{
     width: 0;
     flex: 1;
-    .upp {
-        height: 50vh;
-    }
-    .down {
-        height: 50vh;
-    }
+    /* display: flex;
+    flex-direction: column; */
+}
+.upp {
+    height: 50vh;
+}
+.downn {
+    height: 50vh;
 }
 </style>

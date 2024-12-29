@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "gsap": "^3.12.2",
-    "pinia": "^2.1.4",
+    "pinia": "^2.2.8",
     "three": "^0.170.0",
     "three-orbitcontrols": "^2.110.3",
     "vue": "^3.3.4",
