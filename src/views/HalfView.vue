@@ -81,6 +81,7 @@ onMounted(() => {
   scene.add(ambientLight);
 
   localScene = new THREE.Group();
+  // shishi
   orbitRadius = 400; // Distance from sun to earth
 
   const earthTexture = textureLoader.load('/src/assets/earth.jpg'); // 替换为你的地球纹理图片路径
